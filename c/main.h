@@ -7,5 +7,5 @@
  * @i: iteration counter
  * Return: void
  */
-void factors (long int number);
+void factors (long double number);
 #endif /*HEADER_FACTORS*/

@@ -12,7 +12,7 @@ void main(void)
 	factors(128);
 	factors(1024);
 	factors(4958);
-	/*factors(1718944270642558716715, 2);*/
+	factors(1718944270642558716715.0);
 	factors(9);
 	factors(99);
 	factors(999);

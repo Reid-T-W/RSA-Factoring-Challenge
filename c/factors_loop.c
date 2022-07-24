@@ -6,21 +6,23 @@
  * @i: iteration counter
  * Return: void
  **/
-void factors (long int number)
+void factors (long double number)
 {
 	float multiplier;
 	int i;
 	int last_num;
+	long double ten = 10;
+	long double two = 2;
 
-	last_num = number % 10;
-	if (last_num % 2 == 0)
+	last_num = number % ten;
+	if (last_num % two == 0)
 	{
 		for (i = 2; i < number; i+=2)
 		{
-			if (number % i == 0)
+			if (number % two == 0)
 			{
 				multiplier = number / i;
-				printf("%ld=%d*%d\n",number,i,(int)multiplier);
+				printf("%Lfd=%d*%d\n",number,i,(int)multiplier);
 				return;
 			}
 		}
@@ -33,7 +35,7 @@ void factors (long int number)
 			if (number % i == 0)
 			{
 				multiplier = number / i;
-				printf("%ld=%d*%d\n",number,i,(int)multiplier);
+				printf("%Lf=%d*%d\n",number,i,(int)multiplier);
 				return;
 			}
 		}
