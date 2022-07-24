@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * factors - determines the factors of a number
  * @number: number to be factored
@@ -11,6 +12,8 @@ void factors (unsigned long long int number)
 	float multiplier;
 	int i;
 	int last_num;
+	FILE *fptr;
+	
 
 	last_num = number % 10;
 	if (last_num % 2 == 0)

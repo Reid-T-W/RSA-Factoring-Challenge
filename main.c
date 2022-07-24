@@ -1,23 +1,26 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - main function that calls factors
  * Return: void
  */
-void main(void)
+void main(int argc, char *argv[])
 {
-	factors(4);
-	factors(12);
-	factors(34);
-	factors(128);
-	factors(1024);
-	factors(4958);
-	/*factors(1718944270642558716715);*/
-	factors(9);
-	factors(99);
-	factors(999);
-	factors(9999);
-	factors(9797973);
-	factors(49);
-	factors(239809320265259);
+	FILE *fptr;
+	int num;
+	long long int long_num;
+	int ch;
+
+	/*char *filename;*/
+	if ((fptr = fopen(argv[1],"r")) == NULL){
+		printf("Error! opening file");
+		exit(1);
+	}
+	while (fscanf(fptr,"%lld", &long_num) != EOF)
+	{
+		factors(long_num);
+	}
+	return;
 }
